@@ -16,7 +16,7 @@ WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 BORDER = pygame.Rect(WIDTH // 2 - 5, 0, 10, HEIGHT)
 
 #  BGM random selection
-number = random.randrange(1, 4);
+number = random.randrange(1, 4)
 B1 = False
 B2 = False
 B3 = False
@@ -39,6 +39,7 @@ BGM3 = pygame.mixer.Sound(os.path.join('Assets', 'SPACESHIP_BGM3+.mp3'))
 # Font display
 HEALTH_FONT = pygame.font.SysFont('comicsans', 40)
 WINNER_FONT = pygame.font.SysFont('comicsans', 100)
+CHANCE_FONT = pygame.font.SysFont('comicsans', 100)
 
 # setting a caption on a window
 pygame.display.set_caption("First game")
@@ -180,6 +181,17 @@ def draw_winner(text):
     pygame.display.update()
 
 
+def draw_chance_yellow(text):
+    draw_text = CHANCE_FONT.render(text, 1, WHITE)
+    WIN.blit(draw_text,(WIDTH / 4 - draw_text.get_width() / 2, HEIGHT / 4 - draw_text.get_height() / 2))
+    pygame.display.update()
+
+
+def draw_chance_red(text):
+    draw_text = CHANCE_FONT.render(text, 1, WHITE)
+    WIN.blit(draw_text,(WIDTH * 0.75 - draw_text.get_width() / 2, HEIGHT / 4 - draw_text.get_height() / 2))
+    pygame.display.update()
+
 # def handle_power_up(power_yellow, power_red, yellow, red, power_yellow_list, power_red_list):
 #     for item in power_red_list:
 #         item.y += ITEM_VEL
@@ -233,6 +245,11 @@ def main():
         BGM2.play()
     if B3 == True:
         BGM3.play()
+
+    chance_bool_red = True
+    chance_bool_yellow = True
+
+
     run = True
     # as long as run is true, the game will keep going.
     while run:
@@ -283,6 +300,15 @@ def main():
             WINNER_SOUND.play()
             pygame.time.delay(4000)  # 5 seconds of pause in the game
             break  # quit the game
+        if red_health == 3 and chance_bool_red == True:
+            draw_chance_red("CHANCE!")
+            pygame.time.delay(300)
+            chance_bool_red = False
+
+        if yellow_health == 3 and chance_bool_yellow == True:
+            draw_chance_yellow("CHANCE!")
+            pygame.time.delay(300)
+            chance_bool_yellow = False
 
         keys_pressed = pygame.key.get_pressed()
 
