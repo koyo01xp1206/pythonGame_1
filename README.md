@@ -11,7 +11,23 @@ https://user-images.githubusercontent.com/91754610/185766408-9ad1c30a-5a66-45fd-
 
 This game allows two users to compete against each other on one computer. The goal of this game is to shoot down the opponent's spaceship 10 times with the bullet from your spaceship. 
 
+## Control
+Player 1:
+A: Move spaceship to the left
+W: Move spaceship upward
+D: Move spaceship to the right
+S: Move spaceship downward
+F: To fire a bullet
+
+Player 2:
+Left key: Move spaceship to the left
+Up key: Move spaceship upward
+Right key: Move spaceship to the right
+Down key: Move spaceship downward
+Shift: To fire a bullet
+
 ## Getting Started
+
 
 
 ### Additional Features 
