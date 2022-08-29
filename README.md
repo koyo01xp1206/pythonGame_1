@@ -13,18 +13,18 @@ This game allows two users to compete against each other on one computer. The go
 
 ## Control
 Player 1:
-A: Move spaceship to the left
-W: Move spaceship upward
-D: Move spaceship to the right
-S: Move spaceship downward
-F: To fire a bullet
+- A: Move spaceship to the left
+- W: Move spaceship upward
+- D: Move spaceship to the right
+- S: Move spaceship downward
+- F: To fire a bullet
 
 Player 2:
-Left key: Move spaceship to the left
-Up key: Move spaceship upward
-Right key: Move spaceship to the right
-Down key: Move spaceship downward
-Shift: To fire a bullet
+- Left key: Move spaceship to the left
+- Up key: Move spaceship upward
+- Right key: Move spaceship to the right
+- Down key: Move spaceship downward
+- Shift: To fire a bullet
 
 ## Getting Started
 
@@ -48,7 +48,7 @@ code blocks for commands
 There are 3 background music that will randomly be picked and played during the game. These BGM are originally from the Japanese shooting game called Gradius (グラディウス) which originiates from Famicon (more information about this game can be found [here](https://en.wikipedia.org/wiki/Gradius). Not only these BGM are three of my favorites, I wanted to give a retro-vibe to make this game seem as the ones from old days. 
 
 #### Ending sound effect
-You will also notice that once the 
+You will also notice that once the winner has been determined, there will be a message displaying on the screen to celebrate sound effect to celebrate 
 
 ## Authors
 
